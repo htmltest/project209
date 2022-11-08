@@ -1,7 +1,14 @@
 $(document).ready(function() {
 
     $('.welcome-discount-link a').click(function(e) {
-        $('html, body').animate({'scrollTop': $('.promo').offset().top - 50});
+        var promoTop = $('.promo').offset().top;
+        var promoHeight = $('.promo').outerHeight();
+        var windowHeight = $(window).height();
+        var newTop = promoTop;
+        if (windowHeight > promoHeight) {
+            newTop = promoTop - (windowHeight - promoHeight) / 2;
+        }
+        $('html, body').animate({'scrollTop': newTop});
         e.preventDefault();
     });
 
@@ -39,6 +46,16 @@ $(document).ready(function() {
 
 	$('input.imei').attr('autocomplete', 'off');
     
+    $('.form-input-hint').click(function() {
+        $('.form-input-hint').toggleClass('open');
+    });
+
+    $(document).click(function(e) {
+        if ($(e.target).parents().filter('.form-input-hint').length == 0 && !$(e.target).hasClass('form-input-hint')) {
+            $('.form-input-hint').removeClass('open');
+        }
+    });
+
     $('body').on('click', '.result-btn a', function(e) {
         var curLink = $(this);
         $('.result').addClass('loading');
