@@ -325,9 +325,9 @@ label.error {display:block; position:absolute; left:0; right:0; top:100%; margin
     .form-input > span {top:18px; font-size:14px; line-height:14px}
     .form-input.focus > span,
     .form-input.full > span {font-size:8px; line-height:8px; top:11px}
-    .form-input input {font-size:14px; line-height:14px; padding:24px 19px 12px 19px; height:50px}
-    .form-input input:focus {border-width:1px; padding:24px 19px 12px 19px}
-    .form-input input.error {border-width:1px; padding:24px 19px 12px 19px}
+    .form-input input {font-size:16px; line-height:16px; padding:23px 19px 11px 19px; height:50px}
+    .form-input input:focus {border-width:1px; padding:23px 19px 11px 19px}
+    .form-input input.error {border-width:1px; padding:23px 19px 11px 19px}
 }
 
 .form-input input:-webkit-autofill,
@@ -410,7 +410,7 @@ label.error {display:block; position:absolute; left:0; right:0; top:100%; margin
 .result-header {text-align:center}
 .result-icon {display:inline-block; vertical-align:middle}
 .result-icon img {display:block; width:80px}
-.result-title {display:inline-block; vertical-align:middle; margin:0 0 0 15px; font-weight:normal; font-size:24px; line-height:34px; max-width:270px; text-align:left}
+.result-title {display:inline-block; vertical-align:middle; margin:0 0 0 15px; font-weight:normal; font-size:24px; line-height:34px; max-width:280px; text-align:left}
 .result.success .result-title {background:linear-gradient(224.65deg, #FFFA8F -5.59%, #FF9D53 97.42%); -webkit-background-clip:text; -webkit-text-fill-color:transparent; background-clip:text; text-fill-color:transparent}
 .result.error .result-title {color:#FF1F00}
 .result-subtitle {margin:20px 0 0 0; font-weight:normal; font-size:20px; line-height:28px}

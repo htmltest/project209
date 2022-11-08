@@ -68,7 +68,10 @@ $(document).ready(function() {
             alert('Сервис временно недоступен, попробуйте позже.');
             curForm.removeClass('loading');
         }).done(function(html) {
-            $('.promo-form-content').html(html);
+            $('.promo-form-inner').html(html);
+            $('.promo-form-content form').each(function() {
+                initForm($(this));
+            });
         });
         e.preventDefault();
     });
@@ -159,7 +162,7 @@ function initForm(curForm) {
                 alert('Сервис временно недоступен, попробуйте позже.');
                 curForm.removeClass('loading');
             }).done(function(html) {
-                $('.promo-form-content').html(html);
+                $('.promo-form-inner').html(html);
             });
         }
     });
